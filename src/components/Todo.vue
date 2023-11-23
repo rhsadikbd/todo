@@ -60,8 +60,8 @@ const removeTodo = (index) => {
                 <li class="flex justify-between items-center px-4 py-2 transition-opacity"
                     v-for="(listItem, index) in todos" :key="index">
                     <label class="flex gap-2 text-md" :for="`item${index}`">
-                        <input type="checkbox" :id="`item${index}`" v-model="todos[index].completed">
-                        <span class="text-slate-700" :class="{ 'completed': todos[index].completed }">{{
+                        <input type="checkbox" :id="`item${index}`" v-model="listItem.completed">
+                        <span class="text-slate-700" :class="{ 'completed': listItem.completed }">{{
                             listItem.text
                         }}</span>
                     </label>
